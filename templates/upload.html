@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+            crossorigin="anonymous"></script>
+    <link href="/static/style.css" rel="stylesheet">
+</head>
+
+<body style="">
+<!--Меню НАЧАЛО -->
+<nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/">
+            <img src="/static/images/logo.png" alt="Bootstrap" width="120">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Переключатель навигации">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">О нас</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Преимущества</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Как это работает?</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link">Связаться с нами</a>
+                </li>
+                <li class="nav-item">
+                    {% if not session.logged_in %}
+                    <a class="nav-link" href="/register" style="color: #0281FF;">Личный кабинет</a>
+                    {% else %}
+                    <a class="nav-link" href="/userpage" style="color: #0281FF;">Личный кабинет</a>
+                    {% endif %}
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!--Меню КОНЕЦ-->
+
+<!-- Форма регистрации -->
+{% if session.logged_in %}
+<div style="height: 30px;"></div>
+<div class="mx-auto" style="max-height: 1650px; max-width:700px; border: 5px solid #0281FF; border-radius: 58px;">
+    <p class="text_h1" style="text-align: center; font-weight: 700; margin-top: 20px;">ЗАГРУЗКА СНИМКА</p>
+    <p class="text_h2" style="text-align: center; font-weight: 700; margin-top: 20px;">ПРОВЕРЬТЕ, СООТВЕТСТВУЕТ ЛИ ВАШЕ
+        ФОТО СЛЕДУЮЩИМ РЕКОМЕНДАЦИЯМ:</p>
+    <ul class="text" style="">
+        <li>челюсть полностью видна на фотографии, края не обрезаны</li>
+        <li>хорошее качество фото</li>
+        <li>дневное/студийное освещение</li>
+    </ul>
+    <p class="text_h2" style="text-align: center; font-weight: 700; margin-top: 20px;">ПРИМЕР ФОТОГРАФИИ</p>
+    <p style="text-align: center;"><img src="/static/images/smile.png" style="height: 190px;"></p>
+    {% if error != None %}
+    <div class="alert alert-danger" role="alert">
+        {{ error }}
+    </div>
+    {% endif %}
+    <form style="text-align: center;" method=post enctype=multipart/form-data>
+        <input class="form-control mx-auto border_btn" type="file" style="max-width: 280px; color: #0281FF;" name=file>
+        <button type="submit" class="btn btn-outline-primary" href="/upload"
+                style="margin-top: 15px; border-radius: 25px; border: 2px solid; width: 280px;">Загрузить снимок
+        </button>
+    </form>
+    <div style="height: 30px;"></div>
+</div>
+<div style="height: 100px;"></div>
+{% else %}
+<div class="alert alert-danger" role="alert">
+    Войдите в ваш аккаунт
+</div>
+{% endif %}
+</body>
+</html>

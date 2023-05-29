@@ -1,0 +1,261 @@
+.text_h0{
+    font-size: 50px;
+    overflow:hidden;
+}
+.text_h1{
+    font-size: 40px;
+    overflow:hidden;
+}
+.text_h2{
+    font-size: 30px;
+    overflow:hidden;
+}
+.text_h3{
+    font-size: 25px;
+    overflow:hidden;
+}
+.text{
+    font-size: 20px;
+    overflow:hidden;
+}
+.text_start{
+    font-size: 35px;
+    overflow:hidden;
+}
+
+.txt_blue {
+    color: #0080FF;
+}
+.txt_purple{
+    color: #0281FF;
+}
+
+.img_fon{
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+.numbers_size{
+    height:110px;
+    float: left;
+    margin: 7px 7px 7px 0px;
+}
+
+.numbers_size_r{
+    height:110px;
+    float: right;
+    margin: 7px 7px 7px 0px;
+}
+
+.numbers_size_2_l{
+    height:160px;
+    float: left;
+    margin: 7px 7px 7px 0px;
+}
+
+.numbers_size_2_r{
+    height:170px;
+    float: right;
+    margin: 7px 7px 7px 0px;
+}
+
+.pos_1{
+    position: absolute;
+    width: 559px;
+    height: 162px;
+    left: 150px;
+    top: 300px;
+
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 54px;
+}
+
+.pos_2{
+    position: absolute;
+    width: 712px;
+    height: 33px;
+    left: 150px;
+    top: 470px;
+
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 133.7%;
+    /* or 33px */
+
+    letter-spacing: -0.01em;
+}
+
+.border_purple{
+    text-align: center;
+    font-weight: 400;
+    max-width:450px;
+    color: #FFFFFF;
+    background: #0281FF;
+    border: 5px solid #0281FF;
+    border-radius: 96.5px;
+    padding: 9px;
+}
+
+.border_purple_2{
+    text-align: left;
+    margin-left: auto;
+    font-weight: 400;
+    max-width:700px;
+    color: #000000;
+    background: #FFFFFF;
+    border: 3px solid #0281FF;
+    border-radius: 75px;
+    padding: 19px 15px 19px 39px;
+}
+
+.margins{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.pos_3{
+    position: absolute;
+    left: 150px;
+    top: 520px;
+
+    border-radius: 25px;
+    border: 2px solid;
+    font-size: 25px;
+    width: 282px;
+}
+
+.pos_4{
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    top: 750px;
+}
+
+.pos_block_center{
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 750px;
+}
+
+.img_pos_1{
+    position: absolute;
+    width: 1475px;
+    height: 810px;
+    left: 343px;
+    top: 128px;
+
+    background: url(/static/images/second_img.jpg);
+}
+
+.border_btn{
+        border: 3px solid #0281FF;
+        border-radius: 75px;
+}
+
+.border_analysis{
+        border: 3px solid #0281FF;
+        border-radius: 35px;
+        margin-left: 10px;
+        margin-right: 10px;
+}
+
+@media screen and (max-width: 600px) {
+    .pos_1{
+        position: absolute;
+        width: 359px;
+        height: 162px;
+        left: 20px;
+        top: 290px;
+
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 36px;
+    }
+
+    .pos_2{
+        position: absolute;
+        width: 300px;
+        height: 33px;
+        left: 20px;
+        top: 410px;
+
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 133.7%;
+        /* or 33px */
+
+        letter-spacing: -0.01em;
+    }
+
+    .pos_3{
+        position: absolute;
+        left: 20px;
+        top: 480px;
+
+        border-radius: 25px;
+        border: 2px solid;
+        font-size: 25px;
+        width: 282px;
+    }
+
+    .img_fon{
+        background-position: -190px 10px;
+        background-repeat: no-repeat;
+    }
+
+    .numbers_size{
+        height:70px;
+        float: left;
+        margin: 7px 7px 7px 0px;
+    }
+
+    .text_h1{
+        font-size: 30px;
+    }
+
+    .text_h2{
+        font-size: 25px;
+    }
+
+    .text_h3{
+        font-size: 20px;
+    }
+
+    .text{
+        font-size: 18px;
+    }
+
+    .border_purple_2{
+        margin-left: 5px;
+        margin-right: 5px;
+        text-align: left;
+        font-weight: 400;
+        max-width:400px;
+        color: #000000;
+        background: #FFFFFF;
+        border: 3px solid #0281FF;
+        border-radius: 75px;
+        padding: 19px 15px 19px 39px;
+    }
+
+
+    .numbers_size_2_l{
+        height:130px;
+        float: left;
+        margin: 7px 7px 7px 0px;
+    }
+
+    .border_analysis{
+        border: 3px solid #0281FF;
+        border-radius: 35px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
